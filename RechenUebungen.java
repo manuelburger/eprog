@@ -17,43 +17,27 @@ public class RechenUebungen {
     }
     
     static void rechenUebungen(int maxTerme, int maxZahl) {
-        int fehler = 0;
-        int punkte = 0;
-        Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-        do {
-            int[] terme = zufallsTerme(maxTerme, maxZahl, random);
-            System.out.print(aufgabe(terme));
-            int summe = summe(terme);
-            int antwort = scanner.nextInt();
-            if(antwort == summe)
-                punkte++;
-            else {
-                System.out.println("Falsch! Das Resultat ist " + summe + ".");
-                fehler++;
-            }
-        } while(fehler < 3);
-        System.out.println("Du hast " + punkte + " Punkte!");
+        
+        //TODO: Implement Game
+        
+        
     }
     
     static int[] zufallsTerme(int maxTerme, int maxZahl, Random random) {
-        int terme[] = new int[random.nextInt(maxTerme - 1) + 2];
-        for(int i = 0; i < terme.length; i++)
-            terme[i] = random.nextInt(maxZahl) + 1;
-        return terme;
+        
+        //TODO: Generate array of random terms
+        
     }
     
     static String aufgabe(int[] terme) {
-        String aufgabe = "" + terme[0];
-        for(int i = 1; i < terme.length; i++)
-            aufgabe += " + " + terme[i];
-        return aufgabe + " = ";
+        
+        //TODO: Generate exercise string from term array
+        
     }
     
     static int summe(int[] terme) {
-        int summe = 0;
-        for(int i = 0; i < terme.length; i++)
-            summe += terme[i];
-        return summe;
+        
+        //TODO: return sum of input term array
+        
     }
 }
