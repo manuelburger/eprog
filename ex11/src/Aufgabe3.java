@@ -23,10 +23,5 @@ public class Aufgabe3 {
 		System.out.println(list1);
 		System.out.println(list2);
 
-		ArrayList<Integer> list3 = new ArrayList<Integer>();
-		list3.addAll(list1);
-		System.out.println(list3);
-		list3.retainAll(list2);
-		System.out.println(list3);
 	}
 }
